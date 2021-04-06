@@ -23,7 +23,8 @@ namespace edit
         public MainWindow()
         {
             InitializeComponent();
+            for (int i = 2; i < 74; i++)
+                cbFS.Items.Add(i);
         }
-
     }
 }

@@ -53,28 +53,29 @@
                     <ImageBrush ImageSource="img/scissors_3773.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnCopy" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6">
+            <Button x:Name="btnCopy" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}">
                 <Button.Background>
                     <ImageBrush ImageSource="img/edit_8922.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnPaste" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1">
+            <Button x:Name="btnPaste" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1" Style="{DynamicResource ButtonStyle1}">
                 <Button.Background>
                     <ImageBrush ImageSource="img/paste_9062.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnItalic" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6">
+            <Button x:Name="btnItalic" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}">
                 <Button.Background>
                     <ImageBrush ImageSource="img/format-text-italic_1025.png"/>
                 </Button.Background>
             </Button>
             <ComboBox x:Name="cbFS" Height="20" Margin="0,2,0,0" VerticalAlignment="Top" Width="29"/>
             <ComboBox x:Name="cbFST" Height="20" Margin="0,2,0,0" VerticalAlignment="Top" Width="176"/>
-            <Button x:Name="btnM" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1">
+            <Button x:Name="btnM" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1" Style="{DynamicResource ButtonStyle1}">
                 <Button.Background>
                     <ImageBrush ImageSource="img/mail-reply-all_8970.png"/>
                 </Button.Background>
             </Button>
+            <TextBox x:Name="tbMail" Height="23" Margin="0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="157"/>
         </ToolBar>
         <RichTextBox HorizontalAlignment="Left" Height="361" Margin="0,58,0,0" VerticalAlignment="Top" Width="792">
             <FlowDocument>

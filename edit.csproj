@@ -109,5 +109,11 @@
   <ItemGroup>
     <Resource Include="img\mail-reply-all_8970.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\format-text-bold_8665.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\format-text-underline_8741.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

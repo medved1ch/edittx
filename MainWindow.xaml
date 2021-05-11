@@ -48,17 +48,17 @@
     </Window.Resources>
     <Grid>
         <ToolBar x:Name="TlBar" HorizontalAlignment="Left" Height="28" Margin="0,25,0,0" VerticalAlignment="Top" Width="782">
-            <Button x:Name="btnCut" Content="" Height="24" VerticalAlignment="Top" Width="24" Style="{DynamicResource ButtonStyle1}">
+            <Button x:Name="btnCut" Content="" Height="24" VerticalAlignment="Bottom" Width="24" Style="{DynamicResource ButtonStyle1}" Margin="0,0,0,-1" Click="btnCut_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="img/scissors_3773.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnCopy" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}">
+            <Button x:Name="btnCopy" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}" Click="btnCopy_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="img/edit_8922.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="btnPaste" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1" Style="{DynamicResource ButtonStyle1}">
+            <Button x:Name="btnPaste" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-1" Style="{DynamicResource ButtonStyle1}" Click="btnPaste_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="img/paste_9062.png"/>
                 </Button.Background>
@@ -72,6 +72,9 @@
             <Separator />
             <ComboBox x:Name="cbFS" IsEditable="True" Height="20" Margin="0,2,0,0" VerticalAlignment="Top" Width="36" ToolTip="FontSize" SelectionChanged="FontSize_SelectionChanged"/>
             <ComboBox x:Name="cbFF" IsEditable="True" Height="20" Margin="0,2,0,0" VerticalAlignment="Top" Width="176" ToolTip="Font" SelectionChanged="FontFamily_SelectionChanged"/>
+            <Button x:Name="btnA" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}" Click="btnCopy_Click"></Button>
+            <Button x:Name="btnLA" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}" Click="btnCopy_Click"></Button>
+            <Button x:Name="btnCO" Content="" Height="24" VerticalAlignment="Top" Width="24" Margin="0,0,0,-6" Style="{DynamicResource ButtonStyle1}" Click="btnCopy_Click"></Button>
         </ToolBar>
         <RichTextBox x:Name="Workspace" HorizontalAlignment="Left" Height="361" Margin="0,58,0,0" VerticalAlignment="Top" Width="792" TextChanged="Workspace_TextChanged" >
             <FlowDocument>
@@ -93,17 +96,27 @@
                 <MenuItem Header="Выход" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Правка" >
-                <MenuItem Header="Отменить"></MenuItem>
-                <MenuItem Header="Повторить"></MenuItem>
+                <MenuItem Header="Отменить" Click="MenuItem_Click_2"></MenuItem>
+                <MenuItem Header="Повторить" Click="MenuItem_Click_3"></MenuItem>
                 <Separator/>
-                <MenuItem Header="Вырезать"></MenuItem>
-                <MenuItem Header="Копировать"></MenuItem>
-                <MenuItem Header="Вставить"></MenuItem>
-                <MenuItem Header="Выделить все"></MenuItem>
-                <MenuItem Header="Выделить строку"></MenuItem>
+                <MenuItem Header="Вырезать" Click="MenuItem_Click_4"></MenuItem>
+                <MenuItem Header="Копировать" Click="MenuItem_Click_5"></MenuItem>
+                <MenuItem Header="Вставить" Click="MenuItem_Click_6"></MenuItem>
+                <MenuItem Header="Выделить все" Click="MenuItem_Click_7"></MenuItem>
             </MenuItem>
             <MenuItem Header="Сервис" >
-                <MenuItem Header="Настройки"></MenuItem>
+                <MenuItem Header="Настройки" >
+                    <Grid  HorizontalAlignment="Left" Height="155" Width="343">
+                        <CheckBox Content="Кнопка  &quot;Выделить жирным&quot;" Height="19" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="219"/>
+                        <CheckBox Content="Кнопка  &quot;Выделить курсивом&quot;" Height="19" Margin="10,19,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="219"/>
+                        <CheckBox Content="Кнопка  &quot;Зачеркнуть текст&quot;" Height="19" Margin="10,38,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="219"/>
+                        <CheckBox Content="Кнопка  &quot;Сделать текст прописными буквами&quot;" Height="19" Margin="10,57,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+                        <CheckBox Content="Кнопка  &quot;Сделать текст СТРОЧНЫМИ буквами&quot;" Height="19" Margin="10,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+                        <CheckBox Content="Кнопка  &quot;Уменьшить текст&quot;" Height="19" Margin="10,95,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+                        <CheckBox Content="Кнопка  &quot;Увелить текст&quot;" Height="19" Margin="10,114,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="278"/>
+                        <CheckBox Content="Кнопка  &quot;Нормализации&quot;" Height="19" Margin="10,133,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"  Width="278"/>
+                    </Grid>
+                </MenuItem>
                 <MenuItem Header="Параметры"></MenuItem>
             </MenuItem>
             <MenuItem Header="Справка" ></MenuItem>

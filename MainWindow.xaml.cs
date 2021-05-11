@@ -122,6 +122,51 @@ namespace edit
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnCut_Click(object sender, RoutedEventArgs e)
+        {
+            Workspace.Cut();
+        }
+
+        private void btnCopy_Click(object sender, RoutedEventArgs e)
+        {
+            Workspace.Copy();
+        }
+
+        private void btnPaste_Click(object sender, RoutedEventArgs e)
+        {
+            Workspace.Paste();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            Workspace.Undo();
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            Workspace.Redo();
+        }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            Workspace.Cut();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            Workspace.Copy();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            Workspace.Paste();
+        }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            Workspace.SelectAll();
+        }
     }
     }
     
